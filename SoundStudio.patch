@@ -5,7 +5,7 @@
  
  # Which compiler would you like to invoke?
 -CC="gcc -O2"
-+CC="gcc ${OPT}"
++if [ -z "${CC}" ]; then CC="gcc -O2" ; fi
  
  if [ $# = 0 -o $# -gt 1 ] ; then
      printf "%s\n" "Usage: build (config|default|install|dfltinst|backup)"
@@ -13,7 +13,7 @@
  	     fi
  	     sedCmd2="s:@TEMP_DIR@:$TEMP_DIR:"
  
-+	     if [ -z "$SOX_DIR" ]; then
++	     if [ -z "$SOX_CMD" ]; then
  	     if SOX="`which sox`" ; then
  		 SOX_DIR=`dirname $SOX`
   	         if [ "$Ask" != "Don't" ] ; then
@@ -22,6 +22,6 @@
       		 fi
  	     fi
 +	     fi
- 	     sedCmd3="s:@SOX_DIR@:$SOX_DIR:"
+ 	     sedCmd3="s=@SOX_DIR_CMD@=$SOX_CMD="
  
  	     printf "%s\n" "*** Building script \"studio\""
