@@ -1,4 +1,4 @@
-Summary:	tk sound editor, with record, playback, and mixer facilities
+Summary:	Tk sound editor, with record, playback, and mixer facilities
 Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.6
