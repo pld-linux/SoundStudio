@@ -1,18 +1,27 @@
---- SoundStudio-0.8.2/studio.orig	Tue May 19 15:54:17 1998
-+++ SoundStudio-0.8.2/studio	Tue May 19 15:55:17 1998
-@@ -17,13 +17,13 @@
- # Please set them as is applicable.
+--- SoundStudio/build.orig	Mon Nov 20 16:37:41 2000
++++ SoundStudio/build	Tue Jul 31 08:32:25 2001
+@@ -8,7 +8,7 @@
+ # Set your system-dependencies here!
  
- # I need the full path Where my files are;
--set MYFILES 	.
-+set MYFILES /usr/lib/SoundStudio
+ # Which compiler would you like to invoke?
+-CC="gcc -O2"
++CC="gcc ${OPT}"
  
- # I need a directory to store my temporary files;
- set TEMP_DIR 	/tmp
+ if [ $# = 0 -o $# -gt 1 ] ; then
+     printf "%s\n" "Usage: build (config|default|install|dfltinst|backup)"
+@@ -56,6 +56,7 @@
+ 	     fi
+ 	     sedCmd2="s:@TEMP_DIR@:$TEMP_DIR:"
  
- # Where do I find Sox?
--set SOX_DIR $MYFILES
-+set SOX_DIR /usr/bin
++	     if [ -z "$SOX_DIR" ]; then
+ 	     if SOX="`which sox`" ; then
+ 		 SOX_DIR=`dirname $SOX`
+  	         if [ "$Ask" != "Don't" ] ; then
+@@ -94,6 +95,7 @@
+ 		     printf "\n"
+      		 fi
+ 	     fi
++	     fi
+ 	     sedCmd3="s:@SOX_DIR@:$SOX_DIR:"
  
- ##################################
- # Please Leave the Rest to me.....
+ 	     printf "%s\n" "*** Building script \"studio\""
