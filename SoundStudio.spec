@@ -5,7 +5,7 @@ Version:	1.0.6
 Release:	1
 License:	GPL
 Group:		Applications/Sound
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/studio/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	studio.xpm
 Patch0:		%{name}.patch
