@@ -6,5 +6,5 @@ Exec=/usr/bin/studio
 Terminal=false
 Icon=mail2.xpm
 Type=Application
-Categories=Audio;
+Categories=Audio;Recorder;
 # vi: encoding=utf-8
