@@ -5,8 +5,6 @@ Version:	1.0.5
 Release:	1
 License:	GPL
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D¼wiêk
 Source0:	http://prdownloads.sourceforge.net/studio/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	studio.xpm
