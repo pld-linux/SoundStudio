@@ -41,8 +41,8 @@ MYFILES=%{_libdir}/%{name} SOX_DIR=/usr/bin OPT="%{rpmcflags}" ./build default
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir}/mini,%{_libdir}/%{name},%{_bindir}}
-	$RPM_BUILD_ROOT{_applnkdir}/Multimedia
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir}/mini,%{_libdir}/%{name},%{_bindir}} \
+	$RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
 install studio reset_dsp $RPM_BUILD_ROOT%{_bindir}
 install fader maxmin studio_mixer studio_tool $RPM_BUILD_ROOT%{_libdir}/%{name}
