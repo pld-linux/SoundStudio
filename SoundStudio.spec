@@ -57,7 +57,7 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/studio.xpm
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
