@@ -2,7 +2,7 @@
 Name=SoundStudio
 Comment=SOX interface
 Exec=/usr/bin/studio
-Terminal=0
+Terminal=false
 Icon=mail2.xpm
 Type=Application
 # vi: encoding=utf-8
