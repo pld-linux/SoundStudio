@@ -3,13 +3,14 @@ Name:		SoundStudio
 Version:	0.9.1
 Release:	2
 Group:		Applications/Sound
+Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
 License:	GPL
 Source0:	http://www.elec-eng.leeds.ac.uk/staff/een6njb/Software/Studio/%{name}-%{version}.tar.gz
 URL:		http://www.elec-eng.leeds.ac.uk/staff/een6njb/Software/Studio/screens.html
-Source1:	SoundStudio.wmconfig
+Source1:	%{name}.wmconfig
 Source2:	studio.xpm
-Patch0:		SoundStudio.patch
+Patch0:		%{name}.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, sox >= 11, /bin/more
 
