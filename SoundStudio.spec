@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
+# Source0-md5:	673314c074f719460cf08ed27f2b954b
 Source1:	%{name}.desktop
 Source2:	studio.xpm
 Patch0:		%{name}.patch
