@@ -35,7 +35,7 @@ Daje tak¿e dostêp do miksera karty d¼wiêkowej. Pozwala na konwersjê do
 innych formatów i czêstotliwo¶ci próbkowania.
 
 %prep
-%setup -q -n SoundStudio
+%setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
 
