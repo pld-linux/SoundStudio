@@ -9,7 +9,7 @@ URL:		http://www.elec-eng.leeds.ac.uk/staff/een6njb/Software/Studio/screens.html
 Source1:	SoundStudio.wmconfig
 Source2:	studio.xpm
 Patch0:		SoundStudio.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	tcl >= 7.4, tk >= 4.0, sox >= 11, /bin/more
 
 %description
