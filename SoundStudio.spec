@@ -2,7 +2,7 @@ Summary:	Tk sound editor, with record, playback, and mixer facilities
 Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.6
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
@@ -48,14 +48,14 @@ CC="%{__cc} %{rpmcflags}" \
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir}/mini,%{_libdir}/%{name},%{_bindir}} \
-	$RPM_BUILD_ROOT%{_applnkdir}/Multimedia
+	$RPM_BUILD_ROOT%{_desktopdir}
 
 install studio reset_dsp $RPM_BUILD_ROOT%{_bindir}
 install fader maxmin studio_mixer studio_tool $RPM_BUILD_ROOT%{_libdir}/%{name}
 install *.tk *.ico $RPM_BUILD_ROOT%{_libdir}/%{name}
 install help1.hlp v12.au StudioHelp $RPM_BUILD_ROOT%{_libdir}/%{name}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/studio.xpm
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -76,4 +76,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{name}/*.au
 %{_libdir}/%{name}/StudioHelp
 %{_pixmapsdir}/mini/studio.xpm
-%{_applnkdir}/Multimedia/SoundStudio.desktop
+%{_desktopdir}/SoundStudio.desktop
