@@ -2,7 +2,7 @@ Summary:	Tk sound editor, with record, playback, and mixer facilities
 Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.6
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
