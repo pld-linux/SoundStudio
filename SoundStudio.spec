@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Sound Studio provides a graphical user interface for manipulating
 digitized sound. It allows you to record, play and edit sound files in
-various formats, such as Microsoft's wav files, Sun's audio files
+various formats, such as Microsoft's WAV files, Sun's audio files
 (.au) and Creative Lab's .voc format. It also provides access to a
 sound card's built-in mixer to adjust recording levels and output
 volumes. Also Sound Studio provides you with information about the
@@ -30,7 +30,7 @@ sample and allows conversion into other formats, sampling rates etc.
 %description -l pl
 Sound Studio daje graficzny interfejs do obrabiania cyfrowego d¼wiêku.
 Pozwala na nagrywanie, odtwarzanie i edycjê plików d¼wiêkowych
-w ró¿nych formatach: Microsoft .wav, Sun .au, Creative Labs .voc.
+w ró¿nych formatach: Microsoft .WAV, Sun .au, Creative Labs .voc.
 Daje tak¿e dostêp do miksera karty d¼wiêkowej. Pozwala na konwersjê do
 innych formatów i czêstotliwo¶ci próbkowania.
 
