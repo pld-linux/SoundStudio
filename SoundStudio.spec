@@ -3,12 +3,12 @@ Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.5
 Release:	1
+License:	GPL
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-License:	GPL
 Source0:	http://prdownloads.sourceforge.net/studio/%{name}-%{version}.tar.gz
-Source1:	%{name}.wmconfig
+Source1:	%{name}.desktop
 Source2:	studio.xpm
 Patch0:		%{name}.patch
 URL:		http://studio.sourceforge.net/
@@ -42,15 +42,14 @@ MYFILES=%{_libdir}/%{name} SOX_DIR=/usr/bin OPT="%{rpmcflags}" ./build default
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir}/mini,%{_libdir}/%{name},%{_bindir}}
+	$RPM_BUILD_ROOT{_applnkdir}/Multimedia
+
 install studio reset_dsp $RPM_BUILD_ROOT%{_bindir}
 install fader maxmin studio_mixer studio_tool $RPM_BUILD_ROOT%{_libdir}/%{name}
 install *.tk *.ico $RPM_BUILD_ROOT%{_libdir}/%{name}
 install help1.hlp v12.au StudioHelp $RPM_BUILD_ROOT%{_libdir}/%{name}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/studio.xpm
-
-# change it to .desktop
-#install -d ${RPM_BUILD_ROOT}%{_sysconfdir}/X11/wmconfig
-#install $RPM_SOURCE_DIR/SoundStudio.wmconfig $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/SoundStudio
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
 gzip -9nf README
 
@@ -73,4 +72,4 @@ rm -rf ${RPM_BUILD_ROOT}
 %{_libdir}/%{name}/*.au
 %{_libdir}/%{name}/StudioHelp
 %{_pixmapsdir}/mini/studio.xpm
-#%{_sysconfdir}/X11/wmconfig/SoundStudio
+%{_applnkdir}/Multimedia/SoundStudio.desktop

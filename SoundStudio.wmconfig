@@ -1,6 +1,0 @@
-SoundStudio name "SoundStudio"
-SoundStudio description "SOX interface"
-SoundStudio icon mail2.xpm
-SoundStudio mini-icon studio.xpm
-SoundStudio exec "/usr/bin/studio &"
-SoundStudio group Utilities/Sound
