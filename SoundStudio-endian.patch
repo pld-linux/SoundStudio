@@ -1,0 +1,14 @@
+--- SoundStudio/build.orig	2004-01-18 10:57:49.000000000 +0000
++++ SoundStudio/build	2004-01-18 11:06:20.000000000 +0000
+@@ -124,8 +124,9 @@
+ 	     chmod a+x studio
+ 
+              case $PROCESSOR in
+-                 i?86) ENDIAN=LittleEndian ;;
+-                 sun*) ENDIAN=BigEndian ;;
++                 i?86|alpha|x86_64) ENDIAN=LittleEndian ;;
++                 sun*|ppc|sparc*) ENDIAN=BigEndian ;;
++		 *) printf "%s" "Unknown endianess!" ; exit 1 ;;
+              esac
+ 
+ 	     printf "%s\n" "*** Building common executables..."
