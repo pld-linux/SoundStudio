@@ -2,7 +2,7 @@ Summary:	Tk sound editor, with record, playback, and mixer facilities
 Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Sound
 Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
@@ -10,6 +10,7 @@ Source0:	http://dl.sourceforge.net/studio/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	studio.xpm
 Patch0:		%{name}.patch
+Patch1:		%{name}-endian.patch
 URL:		http://studio.sourceforge.net/
 Requires:	tcl >= 7.4
 Requires:	tk >= 4.0
@@ -36,6 +37,7 @@ innych formatów i czêstotliwo¶ci próbkowania.
 %prep
 %setup -q -n SoundStudio
 %patch0 -p1
+%patch1 -p1
 
 %build
 MYFILES=%{_libdir}/%{name} \
@@ -45,7 +47,6 @@ CC="%{__cc} %{rpmcflags}" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir}/mini,%{_libdir}/%{name},%{_bindir}} \
 	$RPM_BUILD_ROOT%{_applnkdir}/Multimedia
 
