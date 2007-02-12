@@ -1,5 +1,5 @@
 Summary:	Tk sound editor, with record, playback, and mixer facilities
-Summary(pl):	Edytor d¼wiêku z mo¿liwo¶ci± nagrywania, odtwarzania i miksowania
+Summary(pl.UTF-8):   Edytor dÅºwiÄ™ku z moÅ¼liwoÅ›ciÄ… nagrywania, odtwarzania i miksowania
 Name:		SoundStudio
 Version:	1.0.6
 Release:	5
@@ -27,12 +27,12 @@ sound card's built-in mixer to adjust recording levels and output
 volumes. Also Sound Studio provides you with information about the
 sample and allows conversion into other formats, sampling rates etc.
 
-%description -l pl
-Sound Studio daje graficzny interfejs do obrabiania cyfrowego d¼wiêku.
-Pozwala na nagrywanie, odtwarzanie i edycjê plików d¼wiêkowych
-w ró¿nych formatach: Microsoft .WAV, Sun .au, Creative Labs .voc.
-Daje tak¿e dostêp do miksera karty d¼wiêkowej. Pozwala na konwersjê do
-innych formatów i czêstotliwo¶ci próbkowania.
+%description -l pl.UTF-8
+Sound Studio daje graficzny interfejs do obrabiania cyfrowego dÅºwiÄ™ku.
+Pozwala na nagrywanie, odtwarzanie i edycjÄ™ plikÃ³w dÅºwiÄ™kowych
+w rÃ³Å¼nych formatach: Microsoft .WAV, Sun .au, Creative Labs .voc.
+Daje takÅ¼e dostÄ™p do miksera karty dÅºwiÄ™kowej. Pozwala na konwersjÄ™ do
+innych formatÃ³w i czÄ™stotliwoÅ›ci prÃ³bkowania.
 
 %prep
 %setup -q -n %{name}
